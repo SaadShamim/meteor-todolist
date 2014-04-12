@@ -12,6 +12,7 @@ Meteor.methods({
 
 	  	var task = _.extend(_.pick(taskAttributes, 'task'), {
 	      submitted: new Date().getTime(),
+	      completed: false
 	    });
 
 	    var taskId = Tasks.insert(task);

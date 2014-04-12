@@ -13,7 +13,11 @@ Template.home.events({
 				console.log(id);
 			}
 		});
+	}
+});
 
-		$('#task').val('')
+Template.task.events({
+	'click .check': function() {
+		Tasks.update(this._id, {$set: {completed: !this.completed}});
 	}
 });
